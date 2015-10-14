@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
             exit(EXIT_FAILURE);
         }
 
-        printf("%lx\tstdin\n", (unsigned long) crc32_run(ctx));
+        printf("%08lx\tstdin\n", (unsigned long) crc32_run(ctx));
         crc32_free(ctx);
         exit(EXIT_SUCCESS);
     }
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
             goto lbl1;
         }
 
-        printf("%lx\t%s\n", (unsigned long) crc32_run(ctx), argv[i]);
+        printf("%08lx\t%s\n", (unsigned long) crc32_run(ctx), argv[i]);
 
       lbl1:
         crc32_reset(ctx);
